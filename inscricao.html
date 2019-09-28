@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>hiperadores</title>
+  <script> function myFunction() {
+  let jsonArr = {
+	"nome": document.getElementById('nome').value,
+    "email": document.getElementById('email').value,
+    "telefone": document.getElementById('telefone').value,
+    "uf": document.getElementById('uf').value,
+    "atividade": document.getElementById('atividade').value
+  }
+ 
+  console.log(jsonArr)
+  
+  axios.post('https://hiperador2017.free.beeceptor.com', jsonArr)
+  .then(response => {
+    console.log(response)
+  })
+  .catch(error => {
+    console.log(error)
+  })
+  }
+
+
+
+  </script>
+</head>
+
+<body style="background-image: url(&quot;assets/img/background.png&quot;); background-position: center center; background-attachment: fixed; background-size: cover; background-repeat: no-repeat;" class="">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container"> <a class="navbar-brand text-primary" href="index.html">
+        <img class="d-block img-fluid mx-auto" src="assets/img/identidade.png" width="190">
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar4">
+      </div>
+    </div>
+  </nav>
+  <div class="text-center d-flex align-items-stretch justify-content-between my-1" style="">
+    <div class="container">
+      <div class="" id="section1">
+        <div class="container">
+          <div class="row">
+            <div class="bg-light col-md-5 col-lg-6 col-sm-12 col-12"><img class="img-fluid d-block" src="assets/img/g829.png"></div>
+            <div class="bg-light col-12 col-sm-12 col-lg-6 col-md-7">
+              <img class="img-fluid d-block mx-auto" src="assets/img/identidade.png">
+              <form class="pb-0" style="">
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Nome </label>
+                  <div class="col-10">
+                    <div class="form-group row">
+                      <div class="col-10"><input type="text" class="form-control rounded" id="nome" placeholder="Nome"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">E-mail</label>
+                  <div class="col-10">
+                    <div class="form-group row">
+                      <div class="col-10"><input type="text" class="form-control rounded" id="email" placeholder="Email"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label">Telefone</label>
+                  <div class="col-10">
+                    <div class="form-group row">
+                      <div class="col-10"><input type="text" class="form-control rounded" id="telefone" placeholder="0(47) 0000 - 0000"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">UF</label>
+                  <div class="col-10">
+                    <div class="form-group row">
+                      <div class="" id="uf">
+                        <select name="estados-brasil" class="rounded drop-grande" id="uf">
+                          <option value="AC">Acre</option>
+                          <option value="AL">Alagoas</option>
+                          <option value="AP">Amapá</option>
+                          <option value="AM">Amazonas</option>
+                          <option value="BA">Bahia</option>
+                          <option value="CE">Ceará</option>
+                          <option value="DF">Distrito Federal</option>
+                          <option value="ES">Espírito Santo</option>
+                          <option value="GO">Goiás</option>
+                          <option value="MA">Maranhão</option>
+                          <option value="MT">Mato Grosso</option>
+                          <option value="MS">Mato Grosso do Sul</option>
+                          <option value="MG">Minas Gerais</option>
+                          <option value="PA">Pará</option>
+                          <option value="PB">Paraíba</option>
+                          <option value="PR">Paraná</option>
+                          <option value="PE">Pernambuco</option>
+                          <option value="PI">Piauí</option>
+                          <option value="RJ">Rio de Janeiro</option>
+                          <option value="RN">Rio Grande do Norte</option>
+                          <option value="RS">Rio Grande do Sul</option>
+                          <option value="RO">Rondônia</option>
+                          <option value="RR">Roraima</option>
+                          <option value="SC">Santa Catarina</option>
+                          <option value="SP">São Paulo</option>
+                          <option value="SE">Sergipe</option>
+                          <option value="TO">Tocantins</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Atividade</label>
+                  <div class="col-10">
+                    <div class="form-group row">
+                      <div class="" id="atividade">
+                        <select name="estados-brasil" class="rounded drop-grande" id="uf">
+                          <option value="A">Suporte de sistemas</option>
+                          <option value="B">Informática</option>
+                          <option value="C">Desenvolvedor</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form><button class="btn btn-primary gradient rounded mb-4 data-toggle=&quot;modal&quot; data-target=&quot;#ExemploModalCentralizado&quot;" onclick="myFunction()" id="submit" data-target="#exampleModal" data-toggle="modal">Inscreva-se</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Muito Bem!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body"> Inscrição realizada com sucesso!</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
